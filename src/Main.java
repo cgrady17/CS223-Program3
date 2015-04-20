@@ -12,7 +12,7 @@ public class Main {
         String input;
 
         // Create current working directory object starting at root
-        Directory workingDir = new Directory("/");
+        Directory<String> workingDir = new Directory<String>("/");
 
         // Create our File System
         FileSystem fs = new FileSystem();

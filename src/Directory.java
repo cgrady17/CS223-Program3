@@ -3,7 +3,7 @@
  * Created by Connor Grady (GradyCP17)
  * Directory represents a filesystem directory object
  */
-public class Directory extends File {
+public class Directory<E> extends File {
 
     Directory(String name) {
         super(name);
