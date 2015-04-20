@@ -31,7 +31,7 @@ public class Main {
         String path = null;
         if (inputParts[1] != null) {
             arg = inputParts[1];
-            if (arg.contains("-")) {
+            if (arg.equals("-p")) {
                 if (inputParts[2] != null) {
                     // Path exists after argument
                     path = inputParts[2];
