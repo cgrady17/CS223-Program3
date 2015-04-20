@@ -2,6 +2,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * UWW CS223 - Program 3
+ * Created by Connor Grady (GradyCP17)
+ * BinaryTree class to support FileSystem class
+ * Unchanged from original provided
+ */
+
 public class BinaryTree<E> {
 
     protected static class Node <E>{

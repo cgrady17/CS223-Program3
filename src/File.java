@@ -14,8 +14,4 @@ abstract class File {
     Directory getParent(){
         return parent;
     }
-
-//    String getPath() {
-//        // Compute path recursively..
-//    }
 }

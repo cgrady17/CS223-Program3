@@ -3,6 +3,7 @@
  * Created by Connor Grady (GradyCP17)
  * FileSystem is a binary search tree object
  * Based largely on BinarySearchTree.java by thaoc
+ * NOTE: @.CLI = Command Line Interface equivalent
  */
 @SuppressWarnings("unchecked") // Stop IntelliJ from providing unchecked warnings
 public class FileSystem<E extends Comparable> extends BinaryTree<E> {
@@ -12,6 +13,7 @@ public class FileSystem<E extends Comparable> extends BinaryTree<E> {
 
     /**
      * Add the specified item
+     * @.CLI mkdir
      * @param item The item to add
      * @return true if added, otherwise false
      */
@@ -87,6 +89,7 @@ public class FileSystem<E extends Comparable> extends BinaryTree<E> {
 
     /**
      * Delete the specified item
+     * @.CLI rm
      * @param n The current node within which to search for a matching item
      * @param item The specified item for which to search and delete if found
      * @return The node
@@ -101,7 +104,7 @@ public class FileSystem<E extends Comparable> extends BinaryTree<E> {
     private Node<E> delete(Node<E> n, E item) {
         if (n == null) {
             deletedItem = null;
-            return n;
+            return null;
         }
         int compResult = item.compareTo(n.data);
         if (compResult < 0) {
@@ -125,6 +128,7 @@ public class FileSystem<E extends Comparable> extends BinaryTree<E> {
             }
         }
     }
+
     /**
      * Fine the largest child of the specified parent node
      * @param parent The specified parent node
@@ -139,4 +143,16 @@ public class FileSystem<E extends Comparable> extends BinaryTree<E> {
             return findLargestChild(parent.rightChild);
         }
     }
+
+    /**
+     * Change current node
+     * Will be in Main class
+     * @.CLI cd
+     */
+
+    /**
+     * Get current node
+     * Will be in Main class
+     * @.CLI pwd
+     */
 }
