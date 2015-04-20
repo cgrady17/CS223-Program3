@@ -4,21 +4,33 @@
  * FileSystem is a binary search tree object
  * Based largely on BinarySearchTree.java by thaoc
  */
+@SuppressWarnings("unchecked") // Stop IntelliJ from providing unchecked warnings
 public class FileSystem<E extends Comparable> extends BinaryTree<E> {
 
-    private boolean addReturn; //whether add was successful
-    private E deletedItem; //the time that is deleted.
+    private boolean addReturn;
+    private E deletedItem;
+
+    /**
+     * Add the specified item
+     * @param item The item to add
+     * @return true if added, otherwise false
+     */
     boolean add(E item) {
         root = add(root, item);
         return addReturn;
     }
+
     /**
-     Recursively searching for a match
-     -if a match is found, return false;
-     -if no match is found, create a node with the item and return it.
-     -if item is less than current node's data,
-     assign the result of the add method to the left child.
-     -otherwise, assign the result to the right child.
+     * Add the specified item
+     * @param n The current node
+     * @param item The item to add
+     * @return The node
+        Recursively searching for a match
+        -if a match is found, return false;
+        -if no match is found, create a node with the item and return it.
+        -if item is less than current node's data,
+        assign the result of the add method to the left child.
+        -otherwise, assign the result to the right child.
      */
     private Node<E> add(Node<E> n, E item) {
         if (n == null) {
@@ -35,15 +47,25 @@ public class FileSystem<E extends Comparable> extends BinaryTree<E> {
             return n;
         }
     }
+
+    /**
+     * Find the specified target
+     * @param target The object to find
+     * @return The target
+     */
     public E find(E target) {
         return find(target, root);
     }
+
     /**
-     case 1:
-     node is null, not found.
-     target == node.data, found it.
-     target < node.data, search left
-     target > node.data, search right
+     * Locate the specified target
+     * @param target The object to find
+     * @param node The current node
+     * @return The target
+        node is null, not found.
+        target == node.data, found it.
+        target < node.data, search left
+        target > node.data, search right
      */
     private E find(E target, Node<E> node) {
         if (node == null) {
@@ -62,14 +84,19 @@ public class FileSystem<E extends Comparable> extends BinaryTree<E> {
         delete(root, target);
         return deletedItem;
     }
+
     /**
-     1. item < node.data, search left.
-     2. item > node.data, search right.
-     3. item is not found, do nothing.
-     4. item = node.data, delete it.
-     if node has a single child, attach the child to node's parent
-     if node has two children,
-     replace node with the largest node in its left sub tree
+     * Delete the specified item
+     * @param n The current node within which to search for a matching item
+     * @param item The specified item for which to search and delete if found
+     * @return The node
+     *  1. item < node.data, search left.
+        2. item > node.data, search right.
+        3. item is not found, do nothing.
+        4. item = node.data, delete it.
+        if node has a single child, attach the child to node's parent
+        if node has two children,
+        replace node with the largest node in its left sub tree
      */
     private Node<E> delete(Node<E> n, E item) {
         if (n == null) {
@@ -99,8 +126,9 @@ public class FileSystem<E extends Comparable> extends BinaryTree<E> {
         }
     }
     /**
-     Return the largest child of the node parent
-     which is the right most node in the left sub tree.
+     * Fine the largest child of the specified parent node
+     * @param parent The specified parent node
+     * @return data of the largest child of the specified parent node
      */
     private E findLargestChild(Node<E> parent) {
         if (parent.rightChild.rightChild == null) {
@@ -110,24 +138,5 @@ public class FileSystem<E extends Comparable> extends BinaryTree<E> {
         } else {
             return findLargestChild(parent.rightChild);
         }
-    }
-    public static void main(String[] args) {
-        FileSystem bst = new FileSystem();
-        String[] input = {
-                "removal", "also", "follows", "the", "search",
-                "algorithm", "except", "that", "when",
-                "the", "item", "is", "found"};
-        for (String s : input) {
-            bst.add(s);
-        }
-        System.out.println("search for algorithm:" + (bst.find("algorithm")!=null?"found" : "not found"));
-
-        System.out.println(bst);
-        bst.delete("item");
-        System.out.println("deleting item");
-        System.out.println(bst);
-        bst.delete("removal");
-        System.out.println("deleting removal");
-        System.out.println(bst);
     }
 }
