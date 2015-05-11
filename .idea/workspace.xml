@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67ae4b21-32b5-4996-8d18-eaf45641e1df" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Connor\SkyDrive\UW-Whitewater\Spring 2015\CS223\Program 3\src\GeneralTree.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Connor\SkyDrive\UW-Whitewater\Spring 2015\CS223\Program 3\src\Tree.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinaryTree.java" afterPath="$PROJECT_DIR$/src/BinaryTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Directory.java" afterPath="$PROJECT_DIR$/src/Directory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/File.java" afterPath="$PROJECT_DIR$/src/File.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="DELETED" beforePath="C:\Users\Connor\SkyDrive\UW-Whitewater\Spring 2015\CS223\Program 3\src\TreeNode.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CS223-Program3.iws" />
@@ -434,7 +428,7 @@
       <updated>1429567304423</updated>
       <workItem from="1429567304281" duration="1035000" />
       <workItem from="1429622561750" duration="2241000" />
-      <workItem from="1431301954743" duration="10830000" />
+      <workItem from="1431301954743" duration="10867000" />
     </task>
     <task id="LOCAL-00001" summary="Changed Main&#10;">
       <created>1429567624025</created>
@@ -466,11 +460,17 @@
       <option name="project" value="LOCAL" />
       <updated>1431312442625</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Phase 4">
+      <created>1431312800860</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1431312800860</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14106000" />
+    <option name="totallyTimeSpent" value="14143000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -514,12 +514,15 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Changed Main&#10;" />
     <MESSAGE value="Added type parameter to Directory object" />
     <MESSAGE value="Added Tree, TreeNode, and expanded Directory" />
     <MESSAGE value="Phase 2" />
     <MESSAGE value="Phase 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Phase 3" />
+    <MESSAGE value="Phase 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Phase 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -576,10 +579,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -621,17 +621,6 @@
             <element signature="e#7312#7313#0" expanded="true" />
             <element signature="e#8316#8317#0" expanded="true" />
             <element signature="e#8357#8358#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,6 +730,14 @@
             <element signature="e#8414#8422#0" expanded="true" />
             <element signature="e#8758#8766#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58258927">
+          <caret line="184" column="10" selection-start-line="184" selection-start-column="10" selection-end-line="184" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
