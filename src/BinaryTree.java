@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * UWW CS223 - Program 3
  * Created by Connor Grady (GradyCP17)
- * BinaryTree class to support FileSystem class
+ * BinaryTree class to support BinarySearchTree class
  * Unchanged from original provided
  */
 
