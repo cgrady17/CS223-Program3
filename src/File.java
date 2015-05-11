@@ -10,6 +10,13 @@ abstract class File<E> {
     private Directory parent;
 
     /**
+     * Default constructor
+     */
+    public File() {
+        // Do nothing
+    }
+
+    /**
      * Primary constructor that sets File's name
      * @param name The name of the new File
      */
