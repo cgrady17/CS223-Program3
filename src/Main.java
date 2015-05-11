@@ -2,7 +2,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 /**
- * UWW CS223 - Program 3
+ * UWW CS223 - Program 3/4
  * Created by Connor Grady (GradyCP17)
  * Main driver class
  * @commands mkdir, rm, mv, cd, pwd, ls, edit, cat, updatedb, locate, search
@@ -17,10 +17,11 @@ public class Main {
         // Create our File System
         BinarySearchTree fs = new BinarySearchTree();
 
+        System.out.println("Welcome to Fake UNIX");
+
         while(true) {
             Scanner s = new Scanner(System.in);
 
-            System.out.println("Welcome to Fake UNIX");
             System.out.print("$");
 
             input = s.nextLine();
@@ -30,7 +31,7 @@ public class Main {
             String command = inputParts[0];
             String arg = null;
             String path = null;
-            if (inputParts[1] != null) {
+            if (inputParts.length > 1 && inputParts[1] != null) {
                 arg = inputParts[1];
                 if (arg.equals("-p")) {
                     if (inputParts[2] != null) {

@@ -1,5 +1,5 @@
 /**
- * UWW CS223 - Program 3
+ * UWW CS223 - Program 3/4
  * Created by Connor Grady (GradyCP17)
  * BinarySearchTree is a binary search tree object
  * Based largely on BinarySearchTree.java by thaoc

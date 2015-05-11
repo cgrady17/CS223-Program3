@@ -7,7 +7,7 @@ abstract class File<E> {
     // This file's name
     private String name;
     // This files parent directory
-    private Directory parent;
+    private Directory<E> parent;
 
     /**
      * Default constructor

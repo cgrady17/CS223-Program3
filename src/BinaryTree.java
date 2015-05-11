@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * UWW CS223 - Program 3
+ * UWW CS223 - Program 3/4
  * Created by Connor Grady (GradyCP17)
  * BinaryTree class to support BinarySearchTree class
  * Unchanged from original provided
@@ -102,15 +102,5 @@ public class BinaryTree<E> {
         n.leftChild = readHelper(s);
         n.rightChild = readHelper(s);
         return n;
-    }
-
-    public static void main(String[] args){
-
-        BinaryTree<String> tree = BinaryTree.read("a b null null c d null null null");
-        tree.display();
-        System.out.println("preorder :" + tree.preOrderNodes());
-        System.out.println("inorder  :" + tree.inOrderNodes());
-        System.out.println("postorder:" + tree.postOrderNodes());
-
     }
 }

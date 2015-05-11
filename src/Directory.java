@@ -1,7 +1,7 @@
 import java.util.*;
 
 /**
- * UWW CS223 - Program 3
+ * UWW CS223 - Program 3/4
  * Created by Connor Grady (GradyCP17)
  * Directory represents a filesystem directory object
  * Essentially, this is a Node in a Tree
@@ -40,7 +40,7 @@ public class Directory<E> {
      * @param name Name of the new Directory object
      * @param parent Parent directory of the new Directory object
      */
-    public Directory(String name, Directory parent) {
+    public Directory(String name, Directory<E> parent) {
         // Create children ArrayList
         this.children = new ArrayList<Directory<E>>();
         // Create childFiles ArrayList
@@ -93,11 +93,7 @@ public class Directory<E> {
      * @return True if getChildren() not null, otherwise false
      */
     public boolean hasChildren() {
-        if (getChildren() != null) {
-            return true;
-        } else {
-            return false;
-        }
+        return getChildren() != null;
     }
 
     /**
